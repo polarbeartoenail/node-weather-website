@@ -6,7 +6,7 @@ const forecast = require('./utils/forecast')
 const publicDirectoryPath = path.join(__dirname,'../public')
 
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 app.set('view engine','hbs')
 app.use(express.static(publicDirectoryPath))
@@ -60,6 +60,7 @@ app.get('/help', (req, res) => {
         item: 'please do this'
     })
 })
+
 app.listen(port, () => {
     console.log(`Server up on port ${port}`)
 })
