@@ -10,7 +10,7 @@ form.addEventListener('submit',(e)=>{
             console.log('error')
         } else {
             response.json().then((data) => {
-                document.querySelector('p').innerHTML = 'yeaaaah' + JSON.stringify(data)
+                document.querySelector('p').innerHTML = 'okay this should be enough to get used to the workflow' + JSON.stringify(data)
             })
         }
 
